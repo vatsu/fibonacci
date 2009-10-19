@@ -1,0 +1,19 @@
+
+  <% form_remote_tag :url =>  '/fibonacci' do %>
+     <p><%= text_field_tag  :n %><%= submit_tag 'Calcular' %></p>
+   <% end %>
+
+
+<div id='answers'>
+  Tempo<br />
+  <div id='gustavos_answer'>
+    Gustavo<br /><br />
+    <div class='number' id='gtime'>0</div>
+  </div>
+
+  <div id='cassianos_answer'>
+    Cassiano<br /><br />
+    <div class='number' id='ctime'>0</div>
+  </div>
+
+</div>

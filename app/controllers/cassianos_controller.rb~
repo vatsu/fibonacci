@@ -1,0 +1,10 @@
+class CassianosController < ApplicationController
+    def show
+        @fibo = Cassiano.fib(params[:n].to_i)
+
+        respond_to do |format|
+            format.html
+            format.js
+        end
+    end
+end

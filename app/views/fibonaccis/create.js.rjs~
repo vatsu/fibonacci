@@ -1,0 +1,24 @@
+[:ctime, :gtime].each do |selector| 
+  if page[selector].has_class_name :winner  
+    page[selector].toggle_class_name :winner 
+  end
+  if page[selector].has_class_name :oops
+    page[selector].toggle_class_name :oops
+  end 
+end
+
+page.replace_html :ctime, @fibo[:cassiano] 
+
+page.replace_html :gtime, @fibo[:gustavo]
+
+if @fibo[:cassiano].is_a?(String) || @fibo[:gustavo].is_a?(String)
+  element = @fibo[:cassiano].is_a?(String) ? page[:ctime] : page[:gtime]
+  element.add_class_name :oops
+
+else 
+
+  element = @fibo[:gustavo] < @fibo[:cassiano] ? page[:gtime] : page[:ctime]
+  element.visual_effect :pulsate
+  element.add_class_name :winner
+
+end
