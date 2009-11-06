@@ -1,5 +1,0 @@
-page.replace_html :cassianos_answer, @fibo[:cassiano] 
-
-page.replace_html :gustavos_answer, @fibo[:gustavo]
-
-page.replace_html :flash_error, flash[:error]

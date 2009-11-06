@@ -1,6 +1,0 @@
-class Cassiano
-  def self.fib(n)
-    @fib ||= {}
-    @fib[n] ||= (n < 3 ? 1 : fib(n - 2) + fib(n - 1))
-  end
-end

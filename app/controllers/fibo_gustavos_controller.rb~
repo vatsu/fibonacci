@@ -1,5 +1,0 @@
-class FiboGustavosController < AplicationController
-    def show
-        @fibo = FiboGustavo.fib(params[:n])
-    end
-end
